@@ -11,3 +11,6 @@ end
 
 gem 'github-pages'
 gem 'connection_pool', '2.5.0'
+
+# Windows needs a bundled timezone database for Jekyll.
+gem 'tzinfo-data', platforms: :windows

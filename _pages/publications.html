@@ -5,32 +5,44 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<p><small>* Equal contribution.</small></p>
 
-{% include base_path %}
+<h2>Conference Papers</h2>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<article class="archive__item publication-entry">
+  <a class="publication-entry__figure" href="{{ '/images/publications/dvg-framework.png' | relative_url }}" target="_blank" rel="noopener" aria-label="View the DVG framework diagram at full size">
+    <img src="{{ '/images/publications/dvg-framework.png' | relative_url }}" alt="DVG framework diagram" loading="lazy" decoding="async">
+  </a>
+  <div class="publication-entry__details">
+  <h3 class="archive__item-title"><a href="https://arxiv.org/abs/2605.21042">Dynamic Video Generation: Shaping Video Generation Across Time and Space</a></h3>
+  <p>Shikang Zheng*, <strong>Jingkai Huang*</strong>, Jiacheng Liu, Guantao Chen, Lixuan He, Yuqi Lin, Peiliang Cai, Linfeng Zhang</p>
+  <p><strong>NeurIPS 2026</strong></p>
+  <p><a href="https://arxiv.org/abs/2605.21042">arXiv</a> · <a href="https://arxiv.org/pdf/2605.21042">PDF</a> · <a href="https://github.com/DarrenZheng303/DVG">Code</a></p>
+  </div>
+</article>
 
+<article class="archive__item publication-entry">
+  <a class="publication-entry__figure" href="{{ '/images/publications/deltasight-introduction.png' | relative_url }}" target="_blank" rel="noopener" aria-label="View the DeltaSight introduction diagram at full size">
+    <img src="{{ '/images/publications/deltasight-introduction.png' | relative_url }}" alt="DeltaSight introduction diagram" loading="lazy" decoding="async">
+  </a>
+  <div class="publication-entry__details">
+  <h3 class="archive__item-title">DeltaSight: Architecting Efficient Video AIoT Systems via Cross-Stage Consistent Redundancy Elimination</h3>
+  <p>Qinyu Wang, Cen Chen, <strong>Jingkai Huang</strong>, Yawen Qiu, Hongen Shao, Xiaofeng Zou, Ziqian Zeng</p>
+  <p><strong>DAC 2026</strong></p>
+  <p><a href="https://63dac.conference-program.com/session/?sess=sess314">Conference Program</a></p>
+  </div>
+</article>
 
+<h2>Manuscripts</h2>
+
+<article class="archive__item publication-entry">
+  <a class="publication-entry__figure" href="{{ '/images/publications/mans-plus-overview.png' | relative_url }}" target="_blank" rel="noopener" aria-label="View the MANS+ overview diagram at full size">
+    <img src="{{ '/images/publications/mans-plus-overview.png' | relative_url }}" alt="MANS+ overview diagram" loading="lazy" decoding="async">
+  </a>
+  <div class="publication-entry__details">
+  <h3 class="archive__item-title">MANS+: Efficient and Portable ANS Encoding for Multi-Byte Integer Data on CPUs and GPUs</h3>
+  <p>Wenjing Huang*, <strong>Jingkai Huang*</strong>, Haoquan Long, Jinwu Yang, Shengquan Yin, Haoxu Li, Yida Gu, Zedong Liu, Xing Jing, Zheng Wei, Shiyuan Fu, Hao Hu, Jinyang Liu, Guangming Tan, Dingwen Tao</p>
+  <p><strong>Under revision at IEEE Transactions on Parallel and Distributed Systems (TPDS)</strong></p>
+  </div>
+</article>
 

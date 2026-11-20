@@ -1,0 +1,62 @@
+.competition-entry {
+  gap: 1.7rem;
+  margin: 1.75rem 0;
+
+  &__logo {
+    flex-basis: 144px;
+    height: 144px;
+    overflow: hidden;
+    background: #fff;
+
+    img {
+      width: 144px;
+      height: 144px;
+      object-position: center;
+    }
+
+    &--wordmark img {
+      filter: brightness(0);
+    }
+
+    &--symbol img,
+    &--center-crop img {
+      object-fit: cover;
+    }
+
+    &--center-crop img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__details {
+    h3 {
+      font-size: 1.2em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+  }
+
+  &--text {
+    padding-left: calc(144px + 1.7rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .competition-entry {
+    &__logo {
+      flex-basis: 104px;
+      height: 104px;
+
+      img {
+        width: 104px;
+        height: 104px;
+      }
+    }
+
+    &--text {
+      padding-left: calc(104px + 1.7rem);
+    }
+  }
+}

@@ -96,6 +96,12 @@
       {% endif %}      
 
       <!-- Font Awesome icons / Social media -->
+      {% if author.xiaohongshu %}
+        <li><a href="{{ author.xiaohongshu | escape }}"><img class="author__social-logo" src="{{ '/images/social/xiaohongshu.svg' | relative_url }}" alt="" aria-hidden="true" width="20" height="20">Xiaohongshu</a></li>
+      {% endif %}
+      {% if author.wechat_qr %}
+        <li><a href="{{ author.wechat_qr | relative_url }}" target="_blank" rel="noopener"><i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>WeChat</a></li>
+      {% endif %}
       {% if author.artstation %}
         <li><a href="https://www.artstation.com/{{ author.artstation }}"><i class="fab fa-fw fa-artstation icon-pad-right" aria-hidden="true"></i>Artstation</a></li>
       {% endif %}        
