@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Jingkai Huang"
+excerpt: "Personal academic website of Jingkai Huang. Research in video generation and world models."
 author_profile: true
 redirect_from: 
   - /about/
